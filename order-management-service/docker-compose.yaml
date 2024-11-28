@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:14
+    container_name: order-management-db
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: order_management
+    ports:
+      - "5434:5434"
+    volumes:
+      - C:\Users\user\Desktop\foodservice\postgres-data\order-management:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
