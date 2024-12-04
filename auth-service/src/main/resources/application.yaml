@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: auth-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+jwt:
+  secret: MySuperSecretKeyForJwtToken123456
+  expirationMs: 86400000
+
+feign:
+  client:
+    config:
+      default:
+        logger-level: full

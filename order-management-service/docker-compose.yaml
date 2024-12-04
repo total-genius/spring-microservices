@@ -8,9 +8,9 @@ services:
       POSTGRES_PASSWORD: 123
       POSTGRES_DB: order_management
     ports:
-      - "5434:5434"
+      - "5434:5434" # Порт внутри и снаружи контейнера
     volumes:
       - C:\Users\user\Desktop\foodservice\postgres-data\order-management:/var/lib/postgresql/data
-
-volumes:
-  postgres-data:
+    command:
+      - postgres
+      - -p 5434 # Установка внутреннего порта PostgreSQL

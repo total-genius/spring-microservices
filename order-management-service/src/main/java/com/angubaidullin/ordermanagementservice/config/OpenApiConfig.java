@@ -1,4 +1,5 @@
-package com.angubaidullin.usermanagementservice.config;
+package com.angubaidullin.ordermanagementservice.config;
+
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -12,9 +13,9 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("User Management API")
+                        .title("Order Management API")
                         .version("1.0")
-                        .description("API documentation for User Management Service"));
+                        .description("API для управления заказами"));
     }
 
 

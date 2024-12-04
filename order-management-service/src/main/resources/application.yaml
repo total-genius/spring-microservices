@@ -1,9 +1,9 @@
 server:
   port: 8082
+
 spring:
   application:
     name: order-management-service
-
   datasource:
     url: jdbc:postgresql://localhost:5434/order_management
     username: myuser
@@ -15,6 +15,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
   client:
@@ -22,6 +23,12 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+
+
+
+jwt:
+  secret: MySuperSecretKeyForJwtToken123456
 
 feign:
   client:
